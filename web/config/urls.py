@@ -18,6 +18,7 @@ app_urls = [
     path("", include("django.contrib.auth.urls")),
     path("", include("apps.users.urls", namespace="users")),
     path("", include("apps.common.urls", namespace="common")),
+    path("", include("apps.webhooks.urls", namespace="webhooks")),
 ]
 
 api_urls = [
