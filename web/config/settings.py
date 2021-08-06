@@ -66,6 +66,7 @@ PROJECT_APPS = [
     "apps.common",
     "apps.users",
     "apps.api",
+    "apps.webhooks",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
@@ -257,3 +258,8 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_LIFETIME": dt.timedelta(minutes=5),
     "SLIDING_TOKEN_REFRESH_LIFETIME": dt.timedelta(days=1),
 }
+
+
+# Webhook
+WEBHOOK_TOKEN = os.environ.get("WEBHOOK_TOKEN", None)
+WEBHOOK_MESSAGE_RETENTION_TIME = 5  # days
